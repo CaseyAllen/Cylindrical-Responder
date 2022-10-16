@@ -11,9 +11,9 @@ server.get("ping", async(req, res) => {
 } )
 
 
+const port = parseInt(process.env.PORT??"3000")
 
-
-server.listen(3000, "0.0.0.0", async url => {
+server.listen(port, "0.0.0.0", async url => {
     console.log(`Server listening at ${url}`);
     import("./index")
 })
